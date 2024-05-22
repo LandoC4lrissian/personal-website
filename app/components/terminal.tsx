@@ -1,5 +1,5 @@
 "use client";
-//@ts-ignore
+//@ts-nocheck
 import React, { useState } from "react";
 import styled from "styled-components";
 
