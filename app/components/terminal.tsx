@@ -1,4 +1,5 @@
 "use client";
+//@ts-ignore
 import React, { useState } from "react";
 import styled from "styled-components";
 
@@ -50,7 +51,7 @@ const Terminal = () => {
 Type 'help' to see more commands.
 `);
 
-  const handleCommand = (command) => {
+const handleCommand = (command: any) => {
     let newOutput = output;
     const trimmedCommand = command.trim().toLowerCase(); // Boşlukları ve büyük harfleri kaldır
     if (trimmedCommand === "help") {
@@ -71,7 +72,7 @@ Type 'help' to see more commands.
     setOutput(newOutput + "\n> ");
   };
 
-  const handleKeyDown = (e) => {
+  const handleKeyDown = (e: any) => {
     if (e.key === "Enter") {
       handleCommand(e.target.value);
       e.target.value = "";
